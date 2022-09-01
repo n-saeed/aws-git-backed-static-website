@@ -80,9 +80,9 @@ Parameters:
   GeneratorLambdaFunctionRuntime:
     Type: String
     Description: "Runtime language for AWS Lambda function (static site generator)"
-    Default: "python2.7"
+    Default: "python3.10.6"
     AllowedValues:
-      - "python2.7"
+      - "python3.10.6"
       - "nodejs"
       - "nodejs4.3"
       - "java8"
@@ -447,7 +447,7 @@ Resources:
       Role: !GetAtt LambdaExecutionRole.Arn
       MemorySize: 1536
       Timeout: 300
-      Runtime: python2.7
+      Runtime: python3.10.6
       Handler: index.handler
       Code:
         S3Bucket: !Ref SyncLambdaFunctionS3Bucket
